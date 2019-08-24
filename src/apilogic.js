@@ -23,7 +23,7 @@ async function search() {
       state: weatherState,
       degree: degreeType
     };
-    console.log(rundown);
+    return rundown;
   } catch (error) {
     alert('Please enter a valid City!!');
   }
