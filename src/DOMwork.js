@@ -1,5 +1,6 @@
 import search from './apilogic';
 
+let notused = "this is it";
 async function DOMWork() {
   const reset = document.querySelector('.results');
   if (reset) {
