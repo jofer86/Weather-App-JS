@@ -1,15 +1,36 @@
+body{
+  font-family: 'Livvic', sans-serif;
+  margin: 0;
+}
+
+h3{
+  color: rgb(79,120,173);
+}
+
+.city-img{
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.head{
+  font-size: 80px;
+  color: #eff9c7;
+  margin-bottom: 10px;
+}
+
 .appUI{
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(135deg, rgb(79,120,173)0%, rgb(239,249,199)100%);
-   
+  background-image: linear-gradient(135deg, rgb(79,120,173)0%, rgb(239, 249, 199)100%);   
 }
 
 .search-box{
   position: absolute;
-  top: 69vh;
+  top: 78vh;
 }
 
 .city {
@@ -18,7 +39,7 @@
   height: 30px;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
   color: rgb(196, 241, 231);
   opacity: 1;
   font-size: 18px;
@@ -69,7 +90,7 @@
 
 .results{
   position: absolute;
-  top: 20vh;
+  top: 25vh;
   visibility: hidden;
   opacity: 1;  
   animation-name: enter;
@@ -104,11 +125,12 @@
 .temperature {
   text-align: center;
   z-index: 2;
+  color: rgb(79,120,173);
 }
 
 .weather{
   position: absolute;
-  top: -40px;
+  top: 0px;
   left: -100px;  
   z-index: -1;
   width: 100%;
