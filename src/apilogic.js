@@ -2,28 +2,24 @@ async function search() {
   try {
     const cityName = document.querySelector('.city').value;
     const result = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${cityName}`
+      `https://api.weatherbit.io/v2.0/current?city=${cityName}&key=c1faea1cee424d32a6d580d4eb1fb86b`
     );
     const data = await result.json();
-    const { woeid: cityID } = data[0];
-    const forecast = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${cityID}`
-    ); 
-    const foreData = await forecast.json();
-    const {
-      the_temp: celsiusTemp,
-      weather_state_abbr: weatherState
-    } = foreData.consolidated_weather[0];
+    const celsiusTemp = data.data[0].temp;
+    const farenheitTemp = celsiusTemp * (9 / 5) + 32;
+    const weatherIcon = data.data[0].weather.icon;
+    const weatherCode = data.data[0].weather.code;
+    const weatherDescription = data.data[0].weather.description;
 
-    const farenheitTemp = (celsiusTemp * 9) / 5 + 32;
-    const degreeType = document.querySelector('.temp').value;
     const rundown = {
-      celsius: celsiusTemp,
-      farenheit: farenheitTemp,
-      state: weatherState,
-      degree: degreeType
+      celsiusTemp: celsiusTemp,
+      farenheitTemp: farenheitTemp,
+      weatherIcon: weatherIcon,
+      weatherCode: weatherCode,
+      weatherDescription: weatherDescription
     };
-    return rundown;
+    console.log(rundown);
+    
   } catch (error) {
     alert('Please enter a valid City!!');
   }
