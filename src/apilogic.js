@@ -8,7 +8,7 @@ async function search() {
     const { woeid: cityID } = data[0];
     const forecast = await fetch(
       `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${cityID}`
-    );
+    ); 
     const foreData = await forecast.json();
     const {
       the_temp: celsiusTemp,
