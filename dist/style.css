@@ -73,7 +73,7 @@
   visibility: hidden;
   opacity: 1;  
   animation-name: enter;
-  animation-duration: 5s;
+  animation-duration: 1s;
   
 }
 
@@ -96,10 +96,20 @@
 }
 
 .results{
-  visibility: visible;  
+  visibility: visible;
+  z-index: 2;  
 }
 
 .cityName,
 .temperature {
   text-align: center;
+  z-index: 2;
+}
+
+.weather{
+  position: absolute;
+  top: -40px;
+  left: -100px;  
+  z-index: -1;
+  width: 100%;
 }

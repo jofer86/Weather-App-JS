@@ -6,14 +6,14 @@ async function search() {
     );
     const data = await result.json();
     const celsiusTemp = data.data[0].temp;
-    const farenheitTemp = celsiusTemp * (9 / 5) + 32;
+    const farenheitTemp = Math.floor(celsiusTemp * (9 / 5) + 32);
     const weatherIcon = data.data[0].weather.icon;
     const weatherCode = data.data[0].weather.code;
     const weatherDescription = data.data[0].weather.description;
     const city = data.data[0].city_name;
+    const degreeValue = document.querySelector('.temp').value;
     const rundown = {
-      celsiusTemp: celsiusTemp,
-      farenheitTemp: farenheitTemp,
+      temp: degreeValue === '0' ? `${celsiusTemp} ºC` : `${farenheitTemp} ºF`,      
       weatherIcon: weatherIcon,
       weatherCode: weatherCode,
       weatherDescription: weatherDescription,
