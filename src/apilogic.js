@@ -13,7 +13,7 @@ async function search() {
     const city = data.data[0].city_name;
     const degreeValue = document.querySelector('.temp').value;
     const rundown = {
-      temp: degreeValue === '0' ? `${celsiusTemp} ºC` : `${farenheitTemp} ºF`,      
+      temp: degreeValue === '0' ? `${celsiusTemp} ºC` : `${farenheitTemp} ºF`,
       weatherIcon: weatherIcon,
       weatherCode: weatherCode,
       weatherDescription: weatherDescription,
@@ -26,4 +26,4 @@ async function search() {
   }
 }
 
-export default search
+export default search;
