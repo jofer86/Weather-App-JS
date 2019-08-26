@@ -10,13 +10,14 @@ async function search() {
     const weatherIcon = data.data[0].weather.icon;
     const weatherCode = data.data[0].weather.code;
     const weatherDescription = data.data[0].weather.description;
-
+    const city = data.data[0].city_name;
     const rundown = {
       celsiusTemp: celsiusTemp,
       farenheitTemp: farenheitTemp,
       weatherIcon: weatherIcon,
       weatherCode: weatherCode,
-      weatherDescription: weatherDescription
+      weatherDescription: weatherDescription,
+      city: city
     };
     return rundown;
     

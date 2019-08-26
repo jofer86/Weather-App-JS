@@ -1,3 +1,4 @@
-import search from './apilogic'
+import search from './apilogic';
+import DOMWork from './DOMwork';
 
-document.querySelector('.button').addEventListener('click', search);
+document.querySelector('.button').addEventListener('click', DOMWork);
