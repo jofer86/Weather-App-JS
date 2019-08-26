@@ -18,7 +18,7 @@ async function search() {
       weatherCode: weatherCode,
       weatherDescription: weatherDescription
     };
-    console.log(rundown);
+    return rundown;
     
   } catch (error) {
     alert('Please enter a valid City!!');
