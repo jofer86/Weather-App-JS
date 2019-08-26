@@ -1,0 +1,105 @@
+.appUI{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, rgb(79,120,173)0%, rgb(239,249,199)100%);
+   
+}
+
+.search-box{
+  position: absolute;
+  top: 69vh;
+}
+
+.city {
+  background-color: rgb(156,166,199);
+  border-radius: 8px;
+  height: 30px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(196, 241, 231);
+  opacity: 1;
+  font-size: 18px;
+  
+}
+
+:-ms-input-placeholder {
+  color: rgb(196, 241, 231);;
+}
+
+::-ms-input-placeholder {
+  color: rgb(196, 241, 231);;
+}
+
+.button {
+  height: 35px;
+  border-radius: 8px;
+  background-color: rgb(36,77,120);
+  border: none;
+  color: rgb(255,233,103);
+  -webkit-box-shadow: 3px 6px 12px -4px rgba(0,0,0,1);
+  -moz-box-shadow: 3px 6px 12px -4px rgba(0,0,0,1);
+  box-shadow: 3px 6px 12px -4px rgba(0,0,0,1);
+  transition: all 1s;
+}
+
+.button:hover{
+  box-shadow: 3px 6px 12px -4px rgba(0,0,0,.8);
+  transform: translateY(2px);
+}
+
+.temp{
+  width: 240px;
+  height: 34px;
+  overflow: hidden;  
+  border: 1px solid #ccc;
+  /* background: transparent; */
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.results{
+  position: absolute;
+  top: 20vh;
+  visibility: hidden;
+  opacity: 1;  
+  animation-name: enter;
+  animation-duration: 5s;
+  
+}
+
+@keyframes enter{
+  0%{
+    transform: translateX(-35vw);
+    opacity: 0;    
+  }
+  35%{
+    opacity:0;
+  }
+  80%{
+    visibility: visible;
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.results{
+  visibility: visible;  
+}
+
+.cityName,
+.temperature {
+  text-align: center;
+}
