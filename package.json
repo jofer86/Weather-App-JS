@@ -1,0 +1,39 @@
+{
+  "name": "Weather-App-JS",
+  "version": "1.0.0",
+  "description": "This is a weather app that features the use of Asynchronous JS, Webpack, Npm, Babel.",
+  "private": true,
+  "scripts": {
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jofer86/Weather-App-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jofer86/Weather-App-JS/issues"
+  },
+  "homepage": "https://github.com/jofer86/Weather-App-JS#readme",
+  "devDependencies": {
+    "eslint": "^6.2.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-recommended": "^4.0.0",
+    "eslint-config-standard": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "1.18.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "dependencies": {
+    "eslint-plugin-prettier": "^3.1.0",
+    "lodash": "^4.17.15"
+  }
+}
