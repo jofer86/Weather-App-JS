@@ -1,5 +1,6 @@
 async function search() {
 	try {
+		//windows test
 		const cityName = document.querySelector('.city').value;
 		const result = await fetch(
 			`https://api.weatherbit.io/v2.0/current?city=${cityName}&key=c1faea1cee424d32a6d580d4eb1fb86b`
